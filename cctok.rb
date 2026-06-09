@@ -5,20 +5,20 @@
 class Cctok < Formula
   desc "CLI tool for tracking Claude Code & Codex token usage and costs"
   homepage "https://github.com/zK0G0w/cctok"
-  version "0.2.1"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.1/cctok_darwin_amd64.tar.gz"
-      sha256 "476242fbf15e05575af97cd49c628f9b74fcba42197f0658f746d8031a7e519b"
+      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.3/cctok_darwin_amd64.tar.gz"
+      sha256 "155ec837802b6319dac7ddf54d84c23e9bc7fa7e9565dd9208e567c2a5966d27"
 
       define_method(:install) do
         bin.install "cctok"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.1/cctok_darwin_arm64.tar.gz"
-      sha256 "4d2b1fb9b1b237efd1a7516276d3a5abbb9a726ea7d325ac14a5701dee3a4c78"
+      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.3/cctok_darwin_arm64.tar.gz"
+      sha256 "956fffebe3b0a10a89d44e82577c53ea7002f5a3bc4dfc43ed23b6413774e4b5"
 
       define_method(:install) do
         bin.install "cctok"
@@ -28,15 +28,15 @@ class Cctok < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.1/cctok_linux_amd64.tar.gz"
-      sha256 "7012671054bfd689135cba620c0aa546bfb9528ad32b2dcb10711431c9334010"
+      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.3/cctok_linux_amd64.tar.gz"
+      sha256 "40049be1ee08446c9b44ebf74c41dc1ae0c80a18be81b1c2811c186af69eaec6"
       define_method(:install) do
         bin.install "cctok"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.1/cctok_linux_arm64.tar.gz"
-      sha256 "93c3091ec73ee9c7e05af316dc5f4678b90c0a0d498909654421b2ce5ffa962b"
+      url "https://github.com/zK0G0w/cctok/releases/download/v0.2.3/cctok_linux_arm64.tar.gz"
+      sha256 "4e3c9d36435cf7dd78edc792944219b36a4382567d37fa6e8815c4c1bc6a96c6"
       define_method(:install) do
         bin.install "cctok"
       end
